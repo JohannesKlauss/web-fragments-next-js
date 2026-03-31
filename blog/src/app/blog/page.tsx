@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import {ServerActionTest} from "@/components/ServerActionTest";
 
 const posts = [
   {
@@ -50,6 +51,10 @@ export default function BlogIndex() {
               Next.js wordmark served from the Blog MFE&apos;s public/ directory
             </p>
           </div>
+        </div>
+
+        <div className="bg-white border border-emerald-200 rounded-lg p-4 mb-8 flex items-center gap-4">
+          <ServerActionTest/>
         </div>
 
         <h1 className="text-3xl font-bold text-emerald-900 mb-8">Blog Posts</h1>

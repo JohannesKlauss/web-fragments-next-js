@@ -22,7 +22,7 @@ export default function BlogNav() {
           className="invert"
         />
         <h3 className="text-xs font-semibold uppercase tracking-wider text-indigo-300">
-          Blog
+          Blog Update
         </h3>
       </div>
       {navItems.map((item) => (
