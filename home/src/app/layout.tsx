@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import WebFragmentsInit from "./web-fragments-init";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -52,36 +53,18 @@ export default function RootLayout({
             <span className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1 px-2">
               Main
             </span>
-            <a
+            <Link
               href="/"
               className="px-2 py-1.5 rounded text-sm hover:bg-slate-700 transition-colors"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="/account"
               className="px-2 py-1.5 rounded text-sm hover:bg-slate-700 transition-colors text-slate-300"
             >
               Account
-            </a>
-            <a
-              href="/profile"
-              className="px-2 py-1.5 rounded text-sm hover:bg-slate-700 transition-colors text-slate-300"
-            >
-              Profile
-            </a>
-            <a
-              href="/notifications"
-              className="px-2 py-1.5 rounded text-sm hover:bg-slate-700 transition-colors text-slate-300"
-            >
-              Notifications
-            </a>
-            <a
-              href="/settings"
-              className="px-2 py-1.5 rounded text-sm hover:bg-slate-700 transition-colors text-slate-300"
-            >
-              Settings
-            </a>
+            </Link>
           </nav>
 
           {/* Divider */}
