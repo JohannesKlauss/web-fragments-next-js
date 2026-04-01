@@ -8,6 +8,7 @@ A micro-frontend demo using [web-fragments](https://github.com/nicolo-ribaudo/we
 |-----|------|------|
 | **home** | 3000 | Shell app — runs a custom Express gateway that serves the main layout and injects fragments from the blog app |
 | **blog** | 3001 | Blog micro-frontend — a standalone Next.js app whose pages and navigation are embedded into the shell via `<web-fragment>` elements |
+| **account** | 5173 | Account micro-frontend — a standalone Sveltekit template app whose pages and navigation are embedded into the shell via `<web-fragment>` elements |
 
 The home app's Express gateway (`home/server.js`) proxies requests to the blog app on port 3001 and injects the response into the shell. On the client side, the `web-fragments` library handles hydration and encapsulation of embedded fragments.
 
