@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import {ServerActionTest} from "@/components/ServerActionTest";
+import {startTransition} from "react";
+import {SimpleAlert} from "@/components/SimpleAlert";
 
 const posts = [
   {
@@ -55,6 +57,7 @@ export default function BlogIndex() {
 
         <div className="bg-white border border-emerald-200 rounded-lg p-4 mb-8 flex items-center gap-4">
           <ServerActionTest/>
+          <SimpleAlert/>
         </div>
 
         <h1 className="text-3xl font-bold text-emerald-900 mb-8">Blog Posts</h1>

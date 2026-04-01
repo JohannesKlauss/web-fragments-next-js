@@ -1,6 +1,6 @@
 "use server"
 
-export async function createPost(data?: { msg: string }): Promise<{status: 'success'}> {
+export async function createPost(data?: { msg: string }) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({

@@ -29,14 +29,28 @@ gateway.registerFragment({
   }),
 })
 
-// Main blog content — bound fragment (shares window.location with shell)
 gateway.registerFragment({
   fragmentId: 'blog',
+  piercing: false,
   routePatterns: ['/_fragment/blog/:_*', '/blog', '/blog/:_*'],
   endpoint: 'http://localhost:3001',
   onSsrFetchError: async () => ({
     response: new Response(
       '<p style="color:red;padding:16px;font-size:18px">Blog fragment unavailable — is port 3001 running?</p>',
+      { headers: { 'content-type': 'text/html' } },
+    ),
+    overrideResponse: false,
+  }),
+})
+
+gateway.registerFragment({
+  fragmentId: 'account',
+  routePatterns: ['/_fragment/account/:_*', '/account', '/account/:_*'],
+  piercing: false,
+  endpoint: 'http://localhost:5173',
+  onSsrFetchError: async () => ({
+    response: new Response(
+      '<p style="color:red;padding:16px;font-size:18px">Account fragment unavailable — is port 5173 running?</p>',
       { headers: { 'content-type': 'text/html' } },
     ),
     overrideResponse: false,
