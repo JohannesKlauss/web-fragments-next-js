@@ -33,7 +33,11 @@ Start both apps (each in its own terminal):
 cd blog
 npm run dev
 
-# Terminal 2 — Home shell
+# Terminal 2 — Account
+cd account
+npm run dev
+
+# Terminal 3 — Home shell
 cd home
 npm run dev
 ```
@@ -41,6 +45,7 @@ npm run dev
 Open **http://localhost:3000** to see the composed app.
 
 > The blog app is also accessible standalone at http://localhost:3001.
+> The account app is also accessible standalone at http://localhost:5173.
 
 ## Graceful Degradation
 
