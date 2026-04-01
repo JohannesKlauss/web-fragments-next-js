@@ -31,7 +31,6 @@ gateway.registerFragment({
 
 gateway.registerFragment({
   fragmentId: 'blog',
-  piercing: false,
   routePatterns: ['/_fragment/blog/:_*', '/blog', '/blog/:_*'],
   endpoint: 'http://localhost:3001',
   onSsrFetchError: async () => ({
@@ -46,7 +45,6 @@ gateway.registerFragment({
 gateway.registerFragment({
   fragmentId: 'account',
   routePatterns: ['/_fragment/account/:_*', '/account', '/account/:_*'],
-  piercing: false,
   endpoint: 'http://localhost:5173',
   onSsrFetchError: async () => ({
     response: new Response(
